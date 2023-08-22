@@ -123,12 +123,12 @@ function ScanningBasicdetails() {
 
             <div className="form-row">
               <div className="form-group col-md-6">
-                <label htmlFor="arriveddate"> Date</label>
+                <label htmlFor="arriveddate"> Date <span className="text-danger">*</span></label>
                 <input type="date" className="form-control" id="arriveddate" onChange={() => { handleHideErrorText('arrivalDate') }} />
                 {mandatoryfield.arrivalDate && <p className="text-danger">Please Enter the Date.</p>}
               </div>
               <div className="form-group col-md-6">
-                <label htmlFor="arrivedtime"> Time</label>
+                <label htmlFor="arrivedtime"> Time <span className="text-danger">*</span></label>
                 <input type="time" className="form-control" id="arrivedtime" onChange={() => { handleHideErrorText('arrivalTime') }} />
                 {mandatoryfield.arrivalTime && <p className="text-danger">Please Enter the Time.</p>}
               </div>
