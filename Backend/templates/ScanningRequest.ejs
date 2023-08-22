@@ -1,0 +1,94 @@
+<%- include('includes/header'); -%>
+    <table cellpadding="5" cellspacing="5">
+
+        <tr>
+            <td>
+               <b>Warehouse</b>
+            </td>
+            <td>
+                <%= whname %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Client Name</b>
+            </td>
+            <td>
+                <%= clientname %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <b>Project ID</b>
+            </td>
+            <td>
+                <%= projectid %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>Project Type</b>
+            </td>
+            <td>
+                <%= projecttype %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b> City </b>
+
+            </td>
+            <td>
+                <%= city %>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>Total Pages Scan</b></td>
+            <td>
+                <%= totalpagesscan %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Date OF Scanning</b>
+            </td>
+            <td>
+                <%= new Date(scanningdate).toLocaleDateString() %>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>ON SITE</b>
+            </td>
+            <td>
+                <%= onsite %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b> Remark </b>
+            </td>
+            <td>
+                <%= remark %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>Request Date</b>
+            </td>
+            <td>
+                <%= new Date(requestdate).toLocaleDateString() %>
+            </td>
+        </tr>
+
+
+
+    </table>
+    <%- include('includes/footer'); -%>

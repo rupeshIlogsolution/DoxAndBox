@@ -1,0 +1,79 @@
+.PickupReq{
+    background: url('../../Images/bg2.png');
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+.rec_pickup{
+   padding: 6% 0px 0 30px;
+   display: flex;
+   justify-content: space-around;
+   /* margin-bottom: 2px; */
+}
+.rec_pickup input{
+   background:rgb(255, 254, 254);
+   /* border: none;
+   box-shadow: 1px 1px 10px 1px rgb(141, 140, 140); */
+ }
+ .rec_pickup textarea{
+  background:rgb(255, 254, 254);
+  /* border: none;
+  box-shadow: 1px 1px 10px 1px rgb(141, 140, 140); */
+
+  }
+ .rec_pickup label{
+    font-weight: 600;
+    color:#222222
+  }
+  .rec_pickup form{
+    width: 36%;
+  }
+  .rec_pickup .svg_div {
+    width: 34%;
+  }
+  .rec_pickup .svg_div img {
+    width: 270px;
+    margin: 70% 0 -20% 30%;
+  }
+  .maroon_btn{
+    background: #900d10;
+    color: white;
+  }
+  .dark_btn{
+    background: #222222;
+    color: white;
+  }
+  .maroon_btn:hover{
+    background: #750709;
+    color: white;
+  }
+  .dark_btn:hover{
+    background: #313131;
+    color: white;
+  }
+  @media  screen and (min-width:800px) and (max-width:1060px) 
+  {
+    .rec_pickup{
+      padding: 10% 0px 0 30px;
+      display: flex;
+   }
+   .rec_pickup .svg_div img {
+    width: 240px;
+    margin: 80% 0 0 7%;
+  }
+  }
+  @media  screen and (max-width:800px) 
+  {
+      
+    .rec_pickup .svg_div {
+      display: none;
+    }
+    .rec_pickup form{
+      width: 100%;
+      height: 100vh;
+      border: 2px solid red;
+    }
+    .rec_pickup{
+      padding: 100px 5px 0;
+   }
+  
+ } 

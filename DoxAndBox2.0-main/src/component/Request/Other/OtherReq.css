@@ -1,0 +1,91 @@
+.other_req{
+    padding: 6% 0px 0 30px;
+   display: flex;
+   justify-content: space-around;
+}
+.other_req form{
+   width: 66%;
+}
+.generatorlogcontainer{
+    background: url('../../Images/bg2.png');
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+.other_req{
+   padding: 6% 0px 0 30px;
+   display: flex;
+}
+.other_req input{
+   background:rgb(255, 254, 254);
+   border: none;
+   box-shadow: 1px 1px 10px 1px rgb(141, 140, 140);
+ }
+ .other_req select{
+    background:rgb(255, 254, 254);
+    border: none;
+    box-shadow: 1px 1px 10px 1px rgb(141, 140, 140);
+  }
+ .other_req textarea{
+  background:rgb(255, 254, 254);
+  border: none;
+  box-shadow: 1px 1px 10px 1px rgb(141, 140, 140);
+
+  }
+ .other_req label{
+    font-weight: 600;
+    color:#222222
+  }
+  .other_req form{
+    width: 30%;
+    /* border: 1px solid black; */
+  }
+  .other_req .svg_div {
+    width: 34%;
+    /* border: 1px solid black; */
+  }
+  .other_req .svg_div img {
+    width: 270px;
+    margin: 59% 0 0 30%;
+  }
+  .maroon_btn{
+    background: #900d10;
+    color: white;
+  }
+  .dark_btn{
+    background: #222222;
+    color: white;
+  }
+  .maroon_btn:hover{
+    background: #750709;
+    color: white;
+  }
+  .dark_btn:hover{
+    background: #313131;
+    color: white;
+  }
+  @media  screen and (min-width:800px) and (max-width:1060px) 
+  {
+    .other_req{
+      padding: 10% 0px 0 30px;
+      display: flex;
+   }
+   .other_req .svg_div img {
+    width: 240px;
+    margin: 80% 0 0 7%;
+  }
+  }
+  @media  screen and (max-width:800px) 
+  {
+      
+    .other_req .svg_div {
+      display: none;
+    }
+    .other_req form{
+      width: 100%;
+    }
+    .other_req{
+
+      padding: 100px 5px 0;
+   }
+  
+ } 

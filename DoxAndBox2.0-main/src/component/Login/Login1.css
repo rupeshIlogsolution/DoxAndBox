@@ -1,0 +1,155 @@
+.logincontainer{
+    height: 100vh;
+     width: 100%;
+     background: url("../Images/background.jpg");
+     position: relative;
+}
+
+.parentbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+.loginfooter{
+    /* border: 2px solid red; */
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    background:rgb(196, 103, 103);
+
+}
+.loginfooter p{
+    margin-top: 9px;
+    color: white;
+}
+
+.content{
+    width: 90%;
+    height:240px;
+    position: absolute;
+    background:rgb(196, 103, 103);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px black;
+
+
+}
+.content .contentdata{
+    width: 50%;
+    margin-top:90px;
+    margin-left:30px;
+    border-bottom: 2px solid white;
+}
+.content .contentdata h1{
+    font-size:50px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+.loginbox{
+
+
+    width:25%;
+    height:500px;
+    /* border: 1px solid yellow; */
+    z-index: 1000;
+    position: absolute;
+    right: 10%;
+    background:white;
+    padding: 0 25px;
+    box-shadow: 10px 10px 30px 1px rgb(85, 83, 83),-5px -5px 30px 1px rgb(85, 83, 83);
+    border-radius: 15px;
+
+
+}
+.loginbox .iconmelon {
+    /* border:2px solid black; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+.loginbox .iconmelon img{
+    width: 45%;
+}
+/* .loginbox .loginform{
+    border: 1px solid black; 
+
+} */
+.loginbox .loginform .input-group{
+    border-bottom: 2px solid #000;
+    margin-top: 10px;
+
+
+}
+.loginbox .loginform .input-group input{
+    border: none;
+
+}
+.loginbox .loginform .input-group .input-group-addon{
+    border: none;
+    background:transparent;
+
+
+}
+
+.loginbox button{
+    margin-top:25px;
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media  screen and (min-width:769px) and (max-width:1100px) 
+{
+    .loginbox {
+        width:30%;
+        height:400px;
+
+    }   
+    .content .contentdata h1{
+        font-size:30px;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+    }  
+}
+@media  screen and (min-width:481px) and (max-width:769px) 
+{
+    .loginbox {
+        width:40%;
+        height:400px;
+
+    }   
+    .content .contentdata h1{
+        font-size:20px;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+    }  
+}
+@media  screen and (min-width:0) and (max-width:481px) 
+{
+    .loginbox {
+        width:60%;
+        height:400px;
+        margin-left:15%;
+        margin-right:10%;
+
+    }   
+    .content {
+    display:none;
+    }  
+}
+/* @media  screen and (min-width:800px) and (max-width:1000px) 
+{
+    .loginbox {
+        width:30%;
+        height:400px;
+
+    }   
+    .content .contentdata h1{
+        font-size:30px;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+    } 
+} */

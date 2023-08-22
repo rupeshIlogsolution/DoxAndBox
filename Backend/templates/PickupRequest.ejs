@@ -1,0 +1,122 @@
+<%- include('includes/header'); -%>
+    <table cellpadding="5" cellspacing="5">
+
+        <tr>
+            <td>
+               <b>Warehouse</b>
+            </td>
+            <td>
+                <%= whname %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Client Name</b>
+            </td>
+            <td>
+                <%= clientname %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <b>Project ID</b>
+            </td>
+            <td>
+                <%= projectid %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>Project Type</b>
+            </td>
+            <td>
+                <%= projecttype %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b> City </b>
+
+            </td>
+            <td>
+                <%= city %>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>NO OF FILES</b></td>
+            <td>
+                <%= nooffiles %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>PICKUP DATE</b>
+            </td>
+            <td>
+                <%= new Date(pickupdate).toLocaleDateString() %>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>PICKUP TIME</b>
+            </td>
+            <td>
+                <%= pickuptime %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b> CONTACT PERSON </b>
+            </td>
+            <td>
+                <%= contactperson %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>CONTACT PERSON NO</b>
+            </td>
+            <td>
+                <%= contactpersonno %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>	
+                CONTACT PERSON DEPT</b>
+            </td>
+            <td>
+                <%= contactpersondept %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>REMARKS</b>
+            </td>
+            <td>
+                <%= remark %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>REQUEST DATE</b>
+            </td>
+            <td>
+                <%= new Date(requestdate).toLocaleDateString() %>
+            </td>
+        </tr>
+
+
+
+    </table>
+    <%- include('includes/footer'); -%>

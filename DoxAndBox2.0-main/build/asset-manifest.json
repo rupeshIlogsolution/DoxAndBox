@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.45a60dcb.css",
+    "main.js": "/static/js/main.03856ff1.js",
+    "static/js/787.b701888c.chunk.js": "/static/js/787.b701888c.chunk.js",
+    "static/media/loginsmbg.png": "/static/media/loginsmbg.75679547ca867abf5809.png",
+    "static/media/profileimg2.jpg": "/static/media/profileimg2.fc4dd110be64140bb702.jpg",
+    "static/media/bg2.png": "/static/media/bg2.fae202b41178b73e6f08.png",
+    "static/media/phoneicon.png": "/static/media/phoneicon.3d05289432f430c35546.png",
+    "static/media/loginbg.png": "/static/media/loginbg.f27f39acb9ea1c6e076b.png",
+    "static/media/dashbg.webp": "/static/media/dashbg.aa6a999958aff3951d7a.webp",
+    "static/media/bg2.webp": "/static/media/bg2.df2dcca88c57d281be20.webp",
+    "static/media/logoWithoutText.png": "/static/media/logoWithoutText.998f9505ebb9db394bdc.png",
+    "static/media/icon-512x5122.png": "/static/media/icon-512x5122.bb70a3d55f1ffe1438fa.png",
+    "static/media/loginimg.svg": "/static/media/loginimg.1bd1f0e24a1e323c733fd8d7d8c94fad.svg",
+    "static/media/DoxAndBoxShredding.xlsx": "/static/media/DoxAndBoxShredding.cb86a10ba33d924122eb.xlsx",
+    "index.html": "/index.html",
+    "main.45a60dcb.css.map": "/static/css/main.45a60dcb.css.map",
+    "main.03856ff1.js.map": "/static/js/main.03856ff1.js.map",
+    "787.b701888c.chunk.js.map": "/static/js/787.b701888c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45a60dcb.css",
+    "static/js/main.03856ff1.js"
+  ]
+}

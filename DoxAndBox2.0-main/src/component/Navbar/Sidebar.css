@@ -1,0 +1,47 @@
+.slidernav {
+    min-height: 93vh;
+    width: 270px;
+    background: #222222ef;
+    position: fixed;       
+    top: 0;
+    left: 0;
+    margin-top: 61px;
+    transition: all 1s ease;
+    font-size: 2rem;
+    z-index: 1;
+  }
+  
+  .closeslidernav {
+    left: -100%;
+  }
+  
+  .navlist {
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+  }
+  
+  .navlist li {
+    list-style: none;
+    padding: 8px 0px 8px 22px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    margin: 0 0 0 -40px;
+    font-size: 17px;
+    
+  }
+  .navlist li:hover {
+    background: #ad201f;
+  }
+  .navlist li:focus-within {
+    background: #ad201f;
+  }
+  .navlist a{
+    color: white;
+  }
+  .navlist a:hover{
+    color:white
+  }
+  .slidernav option{
+    color: white;
+    background:#222222ef ;
+  }

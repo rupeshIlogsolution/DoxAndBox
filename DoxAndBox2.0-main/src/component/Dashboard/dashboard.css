@@ -1,0 +1,155 @@
+.dashboardcontainer .dashboardwrapper {
+    width: 100%;
+    min-height:120vh;
+    padding-top: 52px;
+    background: url('../Images/dashbg.webp');
+    background-size: 100% 100%;
+}
+
+.dashboardcontainer .dashboardwrapper .dashboardstatuscard {
+    width: 100%;
+    position: relative;
+    /* border: 1px solid blue; */
+}
+.dashboardstatuscard .row1 {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid rgb(36, 9, 9); */
+  margin-bottom: 20px;
+}
+.dashboardstatuscard .row1 .card1{
+  width: 27%;
+  min-height: 15vh;
+  margin: 0 10px;
+  border-radius: 5px;
+  padding: 10px;
+
+
+  /* box-shadow: 1px 1px 6px 1px rgb(91, 91, 91); */
+}
+.card1 .content{
+  display: flex;
+  margin-top: 2%;
+}
+.dashboardstatuscard .row2 {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid rgb(36, 9, 9); */
+}
+
+.dashboardstatuscard .row2 .card1{
+  width: 27%;
+  min-height: 15vh;
+  margin: 0 10px;
+  border-radius: 5px;
+  padding: 10px;
+  /* box-shadow: 1px 1px 6px 1px rgb(91, 91, 91); */
+}
+
+.dashboardstatuscard .row3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px ;
+  margin-bottom: 10px;
+  /* border: 1px solid; */
+}
+.dashboardstatuscard .row3 .graph{
+  width:41%;
+  height: 38vh;
+  margin: 0 10px;
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 6px 1px rgb(91, 91, 91); */
+  padding: 10px;
+}
+
+#inbound{
+  background: #303030;
+}
+#outbound{
+  background:white;
+}
+#active{
+  background: rgb(228, 255, 228);
+}
+::-webkit-scrollbar {
+  width: 7px;
+  background: #2f2f2f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #adaeae; 
+  border-radius: 10px;
+  /* border: 1px solid white; */
+}
+
+@media  screen and (max-width:700px) 
+{
+  .dashboardstatuscard .row2 {
+    display: block;
+    padding-left: 10px;
+    ;
+  }
+  .dashboardstatuscard .row1 {
+    display: block;
+    padding-left: 10px;
+  }
+  .dashboardstatuscard .row2 .card1{
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .dashboardstatuscard .row1 .card1{
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .dashboardstatuscard .row3 {
+    display: block;
+    padding-left: 10px;
+  }
+  .dashboardstatuscard .row3 .graph{
+    width:90%
+  }
+  
+}
+
+.dash_heading{
+  margin: 13px 8.5%;
+  width: 82%;
+  padding: 0 0 5px 0;
+  color: rgb(113, 113, 113);
+}
+@media  screen and (min-width:700px) and (max-width:1200px) 
+{
+  .dashboardstatuscard .row1 .card1{
+    width: 31.8%;
+  }
+  .dashboardstatuscard .row2 .card1{
+    width: 31.8%;
+  }
+  .dashboardstatuscard .row3 .graph{
+    width:48%;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

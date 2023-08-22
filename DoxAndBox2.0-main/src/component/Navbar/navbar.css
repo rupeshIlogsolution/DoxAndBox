@@ -1,0 +1,209 @@
+/* ###################  Navbar css Start ########################## */
+
+.topnav {
+  height: 60px;
+  width: 100%;
+  background: white;
+  display: flex;
+  font-size: 20px;
+  position: relative;
+  color: #000;
+  padding-top: 15px;
+  box-shadow: 2px 2px 8px gray;
+}
+
+.topnav .navicon {
+  position: absolute;
+  left: 3%;
+  margin-top: -5px;
+ 
+}
+
+
+aside {
+  font-size: 1.5rem;
+  transition: all 300ms ease-in-out;
+}
+
+.topnav .navlogo {
+  position: absolute;
+  left: 9%;
+}
+.topnav .loginname {
+  position: absolute;
+  left: 35%;
+}
+.topnav .loginname div{
+  height: 60px;
+  margin-top: 2px;
+}
+
+.topnav .profilediv {
+  position: absolute;
+  right: 5%;
+  display: flex;
+  cursor: pointer;
+
+}
+.topnav .profilediv2 {
+  position: absolute;
+  right: 13%;
+  display: flex;
+  cursor: pointer;
+
+}
+
+.topnav .profilediv svg {
+  margin-top: -8px;
+}
+
+
+.topnav .profileactiondiv {
+  position: absolute;
+  right: 3%;
+  top: 50px;
+  background: #fff;
+  height: 150px;
+  width: 180px;
+  z-index: 1000;
+  box-shadow: 3px 3px 10px gray;
+  border-radius: 10px;
+  color: #000;
+  padding: 5px 0px 5px 0px;
+}
+
+.topnav .profileactiondiv ul {
+  height: 100%;
+  padding: 0;
+  font-size: 18px;
+}
+
+.topnav .profileactiondiv ul a {
+  list-style:none;
+  text-decoration: none;
+  color: #000;
+}
+.topnav .profileactiondiv ul li {
+  height: 33.3%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.topnav .profileactiondiv ul li:hover {
+  background: rgba(0, 89, 255,0.315);
+}
+
+@media screen and (max-width:600px) {
+  .topnav .navlogo {
+    display: none;
+  }
+  .topnav .profilediv2 {
+    display: none;
+  
+  
+  }
+  .topnav .profilediv {
+    display: none;
+  }
+  .topnav .loginname {
+    position: absolute;
+    left: 20%;
+
+  }
+  .topnav .loginname div{
+    height: 100%;
+    font-size: 16px;
+    margin-top: -5px;
+    margin-left: -4px;
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+
+
+
+}
+
+
+/* ###################  Navbar css Start ########################## */
+
+
+/* ###################  sidebar css Start ########################## */
+
+
+.slidernav {
+  height: 100%;
+  width: 270px;
+  background: #fff;
+  position: absolute;       
+  top: 0;
+  left: 0;
+  margin-top: 61px;
+  transition: all 1s ease;
+  font-size: 2rem;
+  z-index: 10;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.closeslidernav {
+  left: -100%;
+}
+
+.navlist {
+  padding: 1rem 1rem 5rem 4rem;
+  color: #000;
+}
+
+.navlist li {
+  list-style: none;
+  margin: 1.5rem 0;
+  cursor: pointer;
+
+}
+
+.navlist li a:hover {
+  color: rgb(0, 89, 255);
+  ;
+}
+
+
+.navlist li a {
+  text-decoration: none;
+  color: #333;
+
+}
+
+.navlist ul{
+  border-top: 1px solid gray;
+}
+.navlist .innerprofileul{
+  border-top: 1px solid rgb(230, 13, 13);
+  
+}
+.navlist li .profiletext {
+  color:rgb(255, 45, 45);
+}
+
+
+.navlist ul a {
+  text-decoration: none;
+
+}
+
+.navlist li a i {
+  font-size: 1.8rem;
+  margin-top: 6px;
+}
+
+.navlist #reportinnerdiv {
+  padding-left: 14%;
+}
+
+.navlist ul a:hover {
+  color: rgb(0, 89, 255);
+  text-decoration: underline;
+}
+
+/* ###################  sidebar css End ##########################*/

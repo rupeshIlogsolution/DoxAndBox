@@ -1,0 +1,38 @@
+.InvoicesinProgress{
+    min-height: 100vh;
+    width: 100%;
+    background: url('../Images/bg2.webp');
+    background-size: 100% 100%;
+    /* border: 1px solid black; */
+}
+.reports_div{
+    padding: 70px 70px;
+    /* border: 1px solid red; */
+}
+.reportdata{
+    /* border: 1px solid black; */
+}
+
+
+/* @media screen and (min-width:1500px){
+    .reportdata{
+       margin-right: 10%;
+    }
+}
+@media screen and (min-width:1400px){
+    .reportdata{
+       margin-right: 6%;
+    }
+}
+@media screen and (min-width:1310px){
+    .reportdata{
+       margin-right: 3%;
+    }
+}
+@media screen and (max-width:800px){
+    .reportdata{
+        width:100%;
+        margin: 0;
+    }
+} */
+

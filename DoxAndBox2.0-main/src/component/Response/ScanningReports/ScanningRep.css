@@ -1,0 +1,62 @@
+.InvoicesinProgress_scanning{
+    min-height: 100vh;
+    width: 100%;
+    background: url('../../Images/bg2.webp');
+    background-size: 100% 100%;
+    /* border: 1px solid black; */
+    padding-top: 80px;
+}
+.reportDataInside{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    /* border: 1px solid black; */
+}
+.reportdata{
+    /* border: 1px solid black; */
+    padding:0 30px;
+}
+
+/*  ===================================================Loading Spinner======================================= */
+.loader {
+    border: 16px solid #d5d5d5;
+    border-radius: 50%;
+    border-top: 16px solid #db3434;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; 
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 45%;
+    top:40%;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @media only screen and (max-width: 800px) {
+    .loader {
+        border: 10px solid #ffffff;
+        border-top: 10px solid #db3434;
+        width: 90px;
+        height: 90px;
+        left: 40%;
+        top:40%
+      }
+}
+  /* ======================================================================================================== */
+@media only screen and (max-width: 800px) {
+    .reportDataInside{
+        display:block;
+        padding: 0 20%;
+    }
+    .reportdata{
+        padding:0 10px;
+    }
+}

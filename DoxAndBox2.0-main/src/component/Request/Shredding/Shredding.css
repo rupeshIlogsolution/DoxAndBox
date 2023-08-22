@@ -1,0 +1,75 @@
+.shredding{
+    padding: 7% 0px 0 30px;
+    display: flex;
+    /* border: 1px solid green; */
+   justify-content: space-around;
+}
+.shredding .form{
+   /* border: 1px solid black; */
+   width: 30%;
+}
+.model_shredding{
+    background:rgba(34,34,34,0.9);
+    color: white;
+}
+#optionsRadios1{
+    box-shadow: none;
+}
+.shredding label{
+    font-weight: 600;
+    color:#222222
+  }
+.shredding input{
+    background:rgb(255, 254, 254);
+    border: none;
+    box-shadow: 1px 1px 10px 1px rgb(141, 140, 140);
+  }
+  .shredding select{
+    background:rgb(255, 254, 254);
+    border: none;
+    box-shadow: 1px 1px 10px 1px rgb(141, 140, 140);
+  }
+  .shredding textarea{
+    background:rgb(255, 254, 254);
+    border: none;
+    box-shadow: 1px 1px 10px 1px rgb(141, 140, 140);
+  }
+  .shredding .svg_div {
+    width: 34%;
+  }
+  .shredding .svg_div img {
+    width: 270px;
+  margin: 59% 0 0 30%;
+  }
+
+
+
+
+  @media  screen and (min-width:800px) and (max-width:1060px) 
+  {
+    .shredding{
+      padding: 15% 0px 0 30px;
+      display: flex;
+   }
+   .shredding .svg_div img {
+    width: 240px;
+    margin: 80% 0 0 7%;
+  }
+  .shredding .form{
+    width: 50%;
+ }
+  }
+  @media  screen and (min-width:0px) and (max-width:800px) 
+  {
+   .shredding .svg_div {
+    display: none;
+  }
+  .shredding .form{
+    width: 90%;
+ }
+ .shredding{
+    padding: 30% 10px 0 10px;
+    display: flex;
+   justify-content: space-around;
+}
+  }

@@ -1,0 +1,16 @@
+.InvoicesinProgress_retRep{
+    min-height: 100vh;
+    width: 100%;
+    background: url('../../Images/bg2.webp');
+    background-size: 100% 100%;
+    /* border: 1px solid black; */
+    padding-top: 80px;
+}
+.reports_div_retRep{
+    padding: 0 30px;
+}
+@media only screen and (max-width: 800px) {
+    .reports_div_retRep{
+        padding: 0 10px;
+    }
+}

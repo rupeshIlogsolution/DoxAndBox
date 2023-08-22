@@ -1,0 +1,58 @@
+.changepasscontainer{
+    background: url('../Images/bg2.webp');
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+.change_password{
+   padding: 6% 0px 0 30px;
+   display: flex;
+   justify-content: space-around;
+}
+.change_password .input-group{
+   background:rgb(255, 254, 254);
+   border: none;
+   box-shadow: 1px 1px 10px 1px rgb(141, 140, 140);
+   border-radius: 10px;
+ }
+ .change_password label{
+    font-weight: 600;
+    color:#222222
+  }
+  .change_password form{
+    width: 30%;
+    z-index: 0;
+    /* border: 1px solid black; */
+  }
+  .change_password .svg_div {
+    width: 34%;
+  }
+  .change_password .svg_div img {
+    width: 270px;
+    margin: 59% 0 0 30%;
+  }
+  @media  screen and (min-width:800px) and (max-width:1060px) 
+  {
+    .change_password{
+      padding: 10% 0px 0 30px;
+      display: flex;
+   }
+   .change_password .svg_div img {
+    width: 240px;
+    margin: 80% 0 0 7%;
+  }
+  }
+  @media  screen and (max-width:800px) 
+  {
+      
+    .change_password .svg_div {
+      display: none;
+    }
+    .change_password form{
+      width: 100%;
+    }
+    .change_password{
+
+      padding: 100px 5px 0;
+   }
+  
+ } 
