@@ -82,7 +82,7 @@ function ScanningBasicdetails() {
         alert('Please Update the Previous Scanning Request of this request Id')
       }
 
-      // window.location.href = "/UserLogindetails";
+      window.location.href = "/UserLogindetails";
     }
   };
 
