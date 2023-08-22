@@ -15,7 +15,9 @@ import Footer from "../Navbar/Footer.js";
 function ScanningBasicdetails() {
   const [mandatoryfield, setMandatoryfield] = useState({
     requestId: false,
-    typeOfScanner: false
+    typeOfScanner: false,
+    arrivalDate: false,
+    arrivalTime: false
   });
   // const [uploadimage,setUploadImage] = useState([]);
   const [scannerdata, setScannerData] = useState([]);
@@ -25,9 +27,15 @@ function ScanningBasicdetails() {
     const fetchdata = async () => {
       const RequestId = await Requestidforuser(localStorage.getItem("User_ID"), "ScanningRequest");
       setRequestid(RequestId);
+      todayDate()
     };
     fetchdata();
   }, []);
+
+  const todayDate = () => {
+    let currentDate = new Date().toJSON().slice(0, 10);
+    document.getElementById('arriveddate').value = currentDate
+  }
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -45,11 +53,20 @@ function ScanningBasicdetails() {
     const Assetid = scannertype_arr[0];
     const Assetname = scannertype_arr[1];
 
-    if (!Requestid) {
-      setMandatoryfield({ ...mandatoryfield, requestId: true })
-    }
-    else if (!scannertype) {
-      setMandatoryfield({ ...mandatoryfield, typeOfScanner: true })
+    if (!Requestid || !scannertype || !Arriveddate || !ArrivedTime) {
+      if (!Requestid) {
+        setMandatoryfield({ ...mandatoryfield, requestId: true })
+      }
+      else if (!Arriveddate) {
+        setMandatoryfield({ ...mandatoryfield, arrivalDate: true })
+      }
+      else if (!ArrivedTime) {
+        setMandatoryfield({ ...mandatoryfield, arrivalTime: true })
+      }
+      else if (!scannertype) {
+        setMandatoryfield({ ...mandatoryfield, typeOfScanner: true })
+      }
+
     }
     else {
       const result = await insertscannerportaldetails(Requestid, "ScanningRequest", StartReading, Endreading, Arriveddate, ArrivedTime, "",
@@ -64,18 +81,21 @@ function ScanningBasicdetails() {
       else if (result.message === 'Not Acceptable') {
         alert('Please Update the Previous Scanning Request of this request Id')
       }
-      
-      window.location.href = "/UserLogindetails";
+
+      // window.location.href = "/UserLogindetails";
     }
   };
 
   const handleChangeRequest_id = async (e) => {
     e.preventDefault();
-    setMandatoryfield({ ...mandatoryfield, requestId: false })
+    handleHideErrorText('requestId')
     const TotalScanner = await totalscannerdetails(e.target.value);
     setScannerData(TotalScanner);
     const datass = await scannerportaldatamorethanone(localStorage.getItem("User_ID"), "2023-07-05", "Scanning", e.target.value);
   };
+  const handleHideErrorText = (fieldType) => {
+    setMandatoryfield({ ...mandatoryfield, [fieldType]: false })
+  }
 
   return (
     <>
@@ -94,8 +114,8 @@ function ScanningBasicdetails() {
               <select className="form-control" id="reqid" onChange={handleChangeRequest_id} style={{ height: "32px" }}>
                 <option value="" hidden> Please Select RequestId </option>
                 {requestid &&
-                  requestid.map((item) => (
-                    <option value={item.Requestid}>{item.Requestid}</option>
+                  requestid.map((item,index) => (
+                    <option key={index} value={item.Requestid}>{item.Requestid}</option>
                   ))}
               </select>
               {mandatoryfield.requestId ? <p className="text-danger">Please! Select Request Id.</p> : null}
@@ -104,11 +124,13 @@ function ScanningBasicdetails() {
             <div className="form-row">
               <div className="form-group col-md-6">
                 <label htmlFor="arriveddate"> Date</label>
-                <input type="date" className="form-control" id="arriveddate" />
+                <input type="date" className="form-control" id="arriveddate" onChange={() => { handleHideErrorText('arrivalDate') }} />
+                {mandatoryfield.arrivalDate && <p className="text-danger">Please Enter the Date.</p>}
               </div>
               <div className="form-group col-md-6">
                 <label htmlFor="arrivedtime"> Time</label>
-                <input type="time" className="form-control" id="arrivedtime" />
+                <input type="time" className="form-control" id="arrivedtime" onChange={() => { handleHideErrorText('arrivalTime') }} />
+                {mandatoryfield.arrivalTime && <p className="text-danger">Please Enter the Time.</p>}
               </div>
             </div>
 
@@ -119,11 +141,11 @@ function ScanningBasicdetails() {
 
             <div className="form-group">
               <label htmlFor="scannertype">Select Type Of Scanner <span className="text-danger">*</span></label>
-              <select className="form-control" id="scannertype" style={{ height: "32px" }} onChange={() => { setMandatoryfield({ ...mandatoryfield, typeOfScanner: false }) }}>
+              <select className="form-control" id="scannertype" style={{ height: "32px" }} onChange={() => { handleHideErrorText('typeOfScanner') }}>
                 <option value="" hidden> Please Select RequestId </option>
                 {scannerdata &&
-                  scannerdata.map((ele) => (
-                    <option value={`${ele.Scnmodelno},${ele.Scannermodel}`} >{`${ele.Scannermodel},${ele.Scnmodelno}`}</option>
+                  scannerdata.map((ele,index) => (
+                    <option key={index} value={`${ele.Scnmodelno},${ele.Scannermodel}`} >{`${ele.Scannermodel},${ele.Scnmodelno}`}</option>
                   ))}
               </select>
               {mandatoryfield.typeOfScanner && <p className="text-danger">Please! Select Type Of Scanner</p>}

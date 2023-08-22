@@ -133,7 +133,7 @@ export const UpdateCount = async (whid,Idcount) => {
 }
 
 export const insertscannerportaldetails = async (Requestid,Requesttype,StartReading,Endreading,Arriveddate,ArrivedTime,Imagelink,Totalpagesscan,Remarks,EntryBy,Noboxes,Nooffiles,Activity,Portalid,Assetid,Assetname,ActivityGLcode,username) => {
-    const url = `http://localhost:3008/api/insertscannerportaldetails`
+    const url = `http://localhost:8008/api/insertscannerportaldetails`
     return axios.post(url, {Requestid,Requesttype,StartReading,Endreading,Arriveddate,ArrivedTime,Imagelink,Totalpagesscan,Remarks,EntryBy,Noboxes,Nooffiles,Activity,Portalid,Assetid,Assetname,ActivityGLcode,username}).then(response => response.data).catch(error => console.log(error));
 }
 

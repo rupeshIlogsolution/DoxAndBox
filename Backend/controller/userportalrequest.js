@@ -26,9 +26,9 @@ const insertscannerportaldetails = async (req, res) => {
         and CONVERT(date,Arriveddate)=cast(GETDATE() as Date)`)
 
         if (!check_date.recordset.length) {
-            const check_blank = await sql.query(`select * from NEWRMSDB.dbo.tbl_UserPortaldetails where Requestid='${Requestid}' 
-            and Endreading='' and Totalpagesscan=''`)
-            
+            const check_blank = await sql.query(`select  Requestid from tbl_UserPortaldetails with (nolock)  where isnull(Endreading,'')='' 
+            and isnull(Totalpagesscan,'')='' and Requestid='${Requestid}'`)
+
             if (!check_blank.recordset.length) {
                 const result = await sql.query(`insert into NEWRMSDB.dbo.tbl_UserPortaldetails(Requestid,Requesttype,StartReading,Endreading,Arriveddate,ArrivedTime,Imagelink,Totalpagesscan,Remarks,EntryBy,Entrydate,Portalid,Noboxes,Nooffiles,Activity,Assetid,Assetname,ActivityGLcode,Updateddate) 
                                                  values('${Requestid}','${Requesttype}','${StartReading}','${Endreading}','${Arriveddate}','${ArrivedTime}','${Imagelink}','${Totalpagesscan}','${Remarks}','${EntryBy}',getdate(),'${Portalid}','${Noboxes}','${Nooffiles}','${Activity}','${Assetid}','${Assetname}','${ActivityGLcode}',getdate())`)
@@ -36,7 +36,7 @@ const insertscannerportaldetails = async (req, res) => {
                 res.status(200).send({ message: 'Added' })
             }
             else {
-                res.status(406).send({ message: 'Not Acceptable' })
+                res.status(208).send({ message: 'Not Acceptable' })
             }
         }
         else {
