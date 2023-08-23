@@ -1,17 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
 import './Sidebar.css'
-import { Totallocation } from '../../api/index'
-import { MdDashboard,MdReport,MdArrowDropDown,MdEditNote } from 'react-icons/md';
-import { BsFillChatSquareQuoteFill } from 'react-icons/bs';
-import { ImLocation } from 'react-icons/im';
-import { RiUserFill } from 'react-icons/ri';
+import { MdDashboard} from 'react-icons/md';
 import {CgLogOut} from 'react-icons/cg';
 
 
-
 const SideBar2 = ({ openClass }) => {
-  const [recorddiv, setRecorddiv] = useState(false);
-
 
   const handleClick = () => {
     window.location.href = '/'
@@ -26,39 +19,18 @@ const SideBar2 = ({ openClass }) => {
             <MdDashboard style={{fontSize:"20px" ,margin:"-2px 5px"}}/>Dashboard
           </a>
         </li>
-
-        
         <li>
-          <a className="menu-item" href="/ScanningBasicDetails">
-           Scanning Request
-          </a>
-
+          <a className="menu-item" href="/ScanningBasicDetails" style={{padding:"10px 70px 10px 0"}}>
+          Scanning Request</a>
         </li>
-
         <li>
-          <a className="menu-item" href="/PickupBasicdetails">
-           Pickup Request
-          </a>
-
+          <a className="menu-item" href="/PickupBasicdetails" style={{padding:"10px 70px 10px 0"}}> Pickup Request </a>
         </li>
         <li >
           <a onClick={handleClick} className="menu-item" href='#' style={{padding:"10px 10px 10px 0px"}}> 
-           <CgLogOut style={{fontSize:"25px",color:"red",margin:"-7px 7px"}}/> Logout
+           <CgLogOut className='text-danger' style={{fontSize:"25px",margin:"-7px 7px"}}/> Logout
           </a>
         </li>
-
-
-
-     
-
-                   
-   
-   
-           <li>
-       
-
-          </li>
-
       </ul>
     </nav>
   );
