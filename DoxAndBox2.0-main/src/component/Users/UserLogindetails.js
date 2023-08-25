@@ -6,7 +6,6 @@ import {
   fileuploadindb,
 } from "../../api/index";
 import "./basicdetail.css";
-import { BiEdit } from "react-icons/bi";
 import { FaFileUpload } from "react-icons/fa";
 import Footer from "../Navbar/Footer.js";
 import Datatable from "react-data-table-component";
@@ -35,7 +34,6 @@ function UserLogindetails() {
       localStorage.getItem("User_ID"),
       e.target.value
     );
-    console.log(Totallocationresult);
     setTotalRequest(Totallocationresult);
   };
 
@@ -45,9 +43,7 @@ function UserLogindetails() {
       const data = new FormData();
       data.append("images", files[i], requestid);
       const Uploadlink = await FileUpload(data);
-      console.log(Uploadlink);
       Uploadlinkdata.push(Uploadlink);
-      console.log(i, files.length - 1);
       if (i === files.length - 1) {
         UploadInDBImg(portalid, custid, Uploadlinkdata, requestid);
       }
@@ -55,7 +51,6 @@ function UserLogindetails() {
   };
 
   const UploadInDBImg = async (portalid, custid, img, requestid) => {
-    console.log(portalid, custid, img, requestid);
     img.forEach(async (values) => {
       const result = await fileuploadindb(
         portalid,
@@ -68,7 +63,6 @@ function UserLogindetails() {
   };
 
   const handleClick = (values) => {
-    console.log(values);
     if (values.Requesttype === "ScanningRequest") {
       localStorage.setItem("portalid", values.Portalid);
       window.location.href = "/updatescanningbasicdetails";
@@ -80,7 +74,7 @@ function UserLogindetails() {
 
   const conditionalRowStyles = [
     {
-      when: (row) => row.RequestStatus == "Open",
+      when: (row) => row.RequestStatus === "Open",
       style: {
         backgroundColor: "#8A9A5B",
       },
@@ -196,9 +190,7 @@ function UserLogindetails() {
       <div className=" container " style={{ paddingTop: "80px" }}>
         <div class="card w-100  border-0" style={{ minHeight: "81vh" }}>
           <div class="card-header  bg-info">
-            <h6 className="text-bold text-white">{`Welcome to Dox & Box ${localStorage.getItem(
-              "User_Name"
-            )}`}</h6>
+            <h6 className="text-bold text-white">{`Welcome to Dox & Box ${localStorage.getItem("User_Name")}`}</h6>
           </div>
           <div class="card-body">
             <DataTableExtensions {...tableData}>

@@ -7,7 +7,7 @@ import Navbar from '../../Navbar/Navbar';
 import Footer from '../../Navbar/Footer'
 import { DatePicker } from "antd";
 import Moment from "moment";
-import "antd/dist/antd.css";
+import "antd/dist/reset.css";
 import './ScanningRep.css'
 import { MdEditNote } from 'react-icons/md';
 

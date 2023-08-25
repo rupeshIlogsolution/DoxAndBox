@@ -93,8 +93,8 @@ const UpdateScanningBasicdetails = () => {
                         </div>
 
                         <div className="form-group" >
-                            <button type="button" className="dark_btn btn float-right mb-4" onClick={handleClick}>Update</button>
-                            <button type="reset" className="maroon_btn btn mr-4 float-right mb-4">Reset</button>
+                            <button type="button" className="maroon_btn btn float-right mb-4" onClick={handleClick}>Update</button>
+                            <button type="reset" className="dark_btn btn mr-4 float-right mb-4">Reset</button>
                         </div>
                     </form>
 

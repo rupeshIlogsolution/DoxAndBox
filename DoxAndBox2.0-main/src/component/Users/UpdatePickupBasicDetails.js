@@ -14,7 +14,6 @@ const UpdatePickupBasicDetails = () => {
       const portalrequest = await getportalrequest(
         localStorage.getItem("portalid")
       );
-      console.log(portalrequest);
       setData(portalrequest);
     };
     fetchdata();
@@ -47,35 +46,18 @@ const UpdatePickupBasicDetails = () => {
 
         <div className="rec_user">
           <div className="svg_div">
-            <img src={svg} />
+            <img src={svg} alt="bg-image" />
           </div>
           <form>
-            <h3 className="pb-3">
-              Update Pickup Basic Details{" "}
-              <BsFillChatSquareQuoteFill
-                style={{ margin: "0 0 -9px 0", fontSize: "30px" }}
-              />
-            </h3>
+            <h3 className="pb-3">Update Pickup Basic Details<BsFillChatSquareQuoteFill style={{ margin: "0 0 -9px 0", fontSize: "30px" }} /></h3>
 
             <div className="form-group">
-              <label>Request Id</label>
-              <input
-                type="text"
-                className="form-control"
-                disabled
-                id="request id"
-                defaultValue={data.Requestid}
-              />
+              <label htmlFor="request">Request Id</label>
+              <input type="text" className="form-control" disabled id="request id" defaultValue={data.Requestid} />
             </div>
             <div className="form-group">
-              <label> Date</label>
-              <input
-                type="text"
-                className="form-control"
-                disabled
-                id="date"
-                defaultValue={data.ARRIVEDDATE}
-              />
+              <label htmlFor="date"> Date</label>
+              <input type="text" className="form-control" disabled id="date" defaultValue={data.ARRIVEDDATE} />
             </div>
 
             {/* <div className="form-group">
@@ -91,51 +73,26 @@ const UpdatePickupBasicDetails = () => {
 
             <div className="form-row">
               <div className="form-group col-md-6">
-                <label>No of Box</label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="noofboxes"
-                  defaultValue={data.Noboxes}
-                />
+                <label htmlFor="noofboxes">No of Box</label>
+                <input type="number" className="form-control" id="noofboxes" defaultValue={data.Noboxes} />
               </div>
 
               <div className="form-group col-md-6">
-                <label>No of Files</label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="nooffiles"
-                  defaultValue={data.Nooffiles}
-                />
+                <label htmlFor="nooffiles">No of Files</label>
+                <input type="number" className="form-control" id="nooffiles" defaultValue={data.Nooffiles} />
               </div>
             </div>
 
             <div className="form-group">
-              <label>Remarks</label>
-              <textarea
-                className="form-control"
-                placeholder="Comments"
-                type="text"
-                id="remarks"
-                defaultValue={data.Remarks}
-              />
+              <label htmlFor="remarks">Remarks</label>
+              <textarea className="form-control" placeholder="Comments" type="text" id="remarks" defaultValue={data.Remarks} />
             </div>
 
             <div className="form-group">
-              <button
-                type="submit"
-                className="dark_btn btn float-right mb-4"
-                onClick={handleClick}
-              >
+              <button type="submit" className="dark_btn btn float-right mb-4" onClick={handleClick} >
                 Update
               </button>
-              <button
-                type="submit"
-                className="maroon_btn btn mr-4 float-right mb-4"
-              >
-                Reset
-              </button>
+              <button className="maroon_btn btn mr-4 float-right mb-4" type="submit" > Reset</button>
             </div>
           </form>
         </div>

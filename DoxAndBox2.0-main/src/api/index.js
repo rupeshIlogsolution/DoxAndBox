@@ -33,7 +33,6 @@ export const ReportData = async (uid_id,location_id,department) => {
 }
 
 export const Mail = async (requestData) => {
-    // console.log(requestData)
     const url = `https://portalbackend.doxandbox.com/api/mail`
     return axios.post(url, {requestData}).then(response => response.data).catch(error => console.log(error));
 }
@@ -79,19 +78,16 @@ export const BoxReports = async (Boxno,CUSTID,WH) => {
 }
 
 export const GenerateTwofa = async (email,org) => {
-    console.log(email,org)
     const url = `https://portalbackend.doxandbox.com/api/Twofa`
     return axios.post(url, {email,org}).then(response => response.data).catch(error => console.log(error));
 }
 
 export const Verify2fa = async (secret, otp,userid) => {
-    console.log(secret,otp,userid)
     const url = `https://portalbackend.doxandbox.com/api/VerifyTwo`
     return axios.post(url, { secret,otp,userid }).then(response => response.data).catch(error => console.log(error));
 }
 
 export const TotalScanReportCount = async (custid,wh,startdate,enddate) => {
-    console.log(custid,wh,startdate,enddate)
     const url = `https://portalbackend.doxandbox.com/api/totalscanreportcount`
     return axios.post(url, {custid,wh,startdate,enddate}).then(response => response.data).catch(error => console.log(error));
 }
@@ -133,7 +129,7 @@ export const UpdateCount = async (whid,Idcount) => {
 }
 
 export const insertscannerportaldetails = async (Requestid,Requesttype,StartReading,Endreading,Arriveddate,ArrivedTime,Imagelink,Totalpagesscan,Remarks,EntryBy,Noboxes,Nooffiles,Activity,Portalid,Assetid,Assetname,ActivityGLcode,username) => {
-    const url = `http://localhost:8008/api/insertscannerportaldetails`
+    const url = `https://portalbackend.doxandbox.com/api/insertscannerportaldetails`
     return axios.post(url, {Requestid,Requesttype,StartReading,Endreading,Arriveddate,ArrivedTime,Imagelink,Totalpagesscan,Remarks,EntryBy,Noboxes,Nooffiles,Activity,Portalid,Assetid,Assetname,ActivityGLcode,username}).then(response => response.data).catch(error => console.log(error));
 }
 

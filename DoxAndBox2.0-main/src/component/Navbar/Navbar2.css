@@ -19,7 +19,7 @@
 .nav_content{
     /* border: 1px solid red; */
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     color: white;
     font-size: 15px;
     padding-top: 7px;

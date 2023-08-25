@@ -80,8 +80,6 @@ function OtherReport() {
       var endDate = year + "-" + month + "-" + day;
 
       const response = await RequestReport(localStorage.getItem('CUST_ID'),'OtherRequest')
-      
-      console.log(response)
       setData(response)
       if(response){
         setLoading(false);
@@ -107,8 +105,6 @@ function OtherReport() {
       ):(
       <div className=" reportdata"  >
         <h3 className="my-4">Shredding Request Report</h3>
-     
-
         <div className="DataTable">
           <DataTableExtensions {...tableData} >
             <Datatable

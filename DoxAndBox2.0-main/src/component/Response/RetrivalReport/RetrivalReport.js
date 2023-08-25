@@ -10,7 +10,7 @@ import { DatePicker } from "antd";
 import { MdEditNote } from 'react-icons/md';
 import Moment from "moment";
 
-import "antd/dist/antd.css";
+import "antd/dist/reset.css";
 
 const { RangePicker } = DatePicker;
 

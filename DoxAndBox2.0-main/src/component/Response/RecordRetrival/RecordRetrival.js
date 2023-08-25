@@ -45,10 +45,10 @@ const columns = [
 
 function RecordRetrivalReport() {
 
-  
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [toogle,setToggle]=useState(true)
+  const [toogle, setToggle] = useState(true)
 
 
   useEffect(() => {
@@ -63,11 +63,10 @@ function RecordRetrivalReport() {
       var startDate = year + "-" + month + "-" + "01";
       var endDate = year + "-" + month + "-" + day;
 
-      const response = await RequestReport(localStorage.getItem('CUST_ID'),'RecorRetrival')
-      
-      console.log(response)
+      const response = await RequestReport(localStorage.getItem('CUST_ID'), 'RecorRetrival')
+
       setData(response)
-      if(response){
+      if (response) {
         setLoading(false);
       }
 
@@ -85,27 +84,24 @@ function RecordRetrivalReport() {
     <div className="InvoicesinProgress">
       <Navbar />
       <div className='reports_div'>
-      {loading?(
-                  <h1 style={{display:"flex",justifyContent:"center",alignItems:"center" }}>Loading...</h1>
+        {loading ? (
+          <h1 style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>Loading...</h1>
 
-      ):(
-      <div className=" reportdata"  >
-        <h3 className="text-dark">record Retrival</h3>
-     
-
-        <div className="DataTable">
-          <DataTableExtensions {...tableData} >
-            <Datatable
-              columns={columns}
-              data={data}
-              pagination
-              
-            />
-          </DataTableExtensions>
-        </div>
+        ) : (
+          <div className=" reportdata"  >
+            <h3 className="text-dark">record Retrival</h3>
+            <div className="DataTable">
+              <DataTableExtensions {...tableData} >
+                <Datatable
+                  columns={columns}
+                  data={data}
+                  pagination
+                />
+              </DataTableExtensions>
+            </div>
+          </div>
+        )}
       </div>
-      )}
-      </div>  
     </div>
   )
 }

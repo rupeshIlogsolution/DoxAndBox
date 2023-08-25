@@ -93,8 +93,6 @@ function PickupReports() {
       ):(
       <div className=" reportdata"  >
         <h3 className="text-dark">Pickup Request Report</h3>
-     
-
         <div className="DataTable">
           <DataTableExtensions {...tableData} >
             <Datatable

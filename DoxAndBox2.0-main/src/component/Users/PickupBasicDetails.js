@@ -15,14 +15,14 @@ import Footer from "../Navbar/Footer.js";
 function PickupBasicdetails() {
   const [mandatoryfield, setMandatoryfield] = useState(false);
   // const [uploadimage,setUploadImage] = useState([]);
-//   const [activity, setActivity] = useState([]);
+  //   const [activity, setActivity] = useState([]);
   const [requestid, setRequestid] = useState([]);
 
   useEffect(() => {
     const fetchdata = async () => {
-    //   const result = await Activityrequest();
-    //   setActivity(result);
-      const RequestId = await Requestidforuser(localStorage.getItem("User_ID"),'RecordPickup');
+      //   const result = await Activityrequest();
+      //   setActivity(result);
+      const RequestId = await Requestidforuser(localStorage.getItem("User_ID"), 'RecordPickup');
       setRequestid(RequestId);
     };
     fetchdata();
@@ -87,27 +87,15 @@ function PickupBasicdetails() {
         <Navbar />
         <div className="rec_user">
           <div className="svg_div">
-            <img src={svg} />
+            <img src={svg} alt="Bg Image" />
           </div>
           <form>
-            <h3 className="pb-3">
-              Request for Pickup Basic Details{" "}
-              <BsFillChatSquareQuoteFill
-                style={{ margin: "0 0 -9px 0", fontSize: "30px" }}
-              />
+            <h3 className="pb-3"> Request for Pickup Basic Details <BsFillChatSquareQuoteFill style={{ margin: "0 0 -9px 0", fontSize: "30px" }} />
             </h3>
             <div className="form-group">
-              <label>
-                Request Id <span style={{ color: "red" }}>*</span>
-              </label>
-              <select
-                className="form-control "
-                id="reqid"
-                style={{ height: "32px" }}
-              >
-                <option value="" hidden>
-                  Please Select RequestId
-                </option>
+              <label> Request Id <span style={{ color: "red" }}>*</span> </label>
+              <select className="form-control " id="reqid" style={{ height: "32px" }} >
+                <option value="" hidden> Please Select RequestId </option>
                 {requestid &&
                   requestid.map((item) => (
                     <option value={item.Requestid}>{item.Requestid}</option>
@@ -117,11 +105,11 @@ function PickupBasicdetails() {
 
             <div className="form-row">
               <div className="form-group col-md-6">
-                <label> Date </label>
+                <label htmlFor="arriveddate"> Date </label>
                 <input type="date" className="form-control" id="arriveddate" />
               </div>
               <div className="form-group col-md-6">
-                <label> Time </label>
+                <label htmlFor="arrivedtime"> Time </label>
                 <input type="time" className="form-control" id="arrivedtime" />
               </div>
             </div>
@@ -133,11 +121,11 @@ function PickupBasicdetails() {
 
             <div className="form-row">
               <div className="form-group col-md-6">
-                <label> No of Boxes Ready </label>
+                <label htmlFor="noofboxes"> No of Boxes Ready </label>
                 <input type="number" className="form-control" id="noofboxes" />
               </div>
               <div className="form-group col-md-6">
-                <label> Total Files in Boxes </label>
+                <label htmlFor="nooffiles"> Total Files in Boxes </label>
                 <input type="number" className="form-control" id="nooffiles" />
               </div>
             </div>
@@ -163,33 +151,17 @@ function PickupBasicdetails() {
             </div> */}
 
             <div className="form-group">
-              <label>Remarks</label>
-              <textarea
-                className="form-control"
-                placeholder="Comments"
-                type="text"
-                id="remarks"
-              />
+              <label htmlFor="remarks">Remarks</label>
+              <textarea className="form-control" placeholder="Comments" type="text" id="remarks" />
             </div>
 
-            {mandatoryfield ? (
-              <p style={{ color: "red" }}>Please! fill the mandatory field.</p>
-            ) : null}
+            {mandatoryfield &&
+              <p className="text-danger">Please! fill the mandatory field.</p>
+            }
 
             <div className="form-group">
-              <button
-                type="submit"
-                className="dark_btn btn float-right mb-4"
-                onClick={handleClick}
-              >
-                Submit
-              </button>
-              <button
-                type="submit"
-                className="maroon_btn btn mr-4 float-right mb-4"
-              >
-                Reset
-              </button>
+              <button type="submit" className="dark_btn btn float-right mb-4" onClick={handleClick} > Submit </button>
+              <button type="submit" className="maroon_btn btn mr-4 float-right mb-4">  Reset</button>
             </div>
           </form>
         </div>

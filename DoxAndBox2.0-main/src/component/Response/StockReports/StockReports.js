@@ -9,7 +9,7 @@ import '../response.css';
 import { MdEditNote } from 'react-icons/md';
 // import { DatePicker } from "antd";
 // import Moment from "moment";
-import "antd/dist/antd.css";
+import "antd/dist/reset.css";
 // const { RangePicker } = DatePicker;
 
 const customStyles = {
@@ -127,8 +127,6 @@ function StockReports() {
     }
 
       const response = await rmsReports('Stock', localStorage.getItem('CUST_ID'), localStorage.getItem('Warehouse_ID'), '', '',department)
-
-      console.log(response)
 
       setData(response)
       if (response) {

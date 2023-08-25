@@ -17,7 +17,8 @@ function ScanningBasicdetails() {
     requestId: false,
     typeOfScanner: false,
     arrivalDate: false,
-    arrivalTime: false
+    arrivalTime: false,
+    startReading: false
   });
   // const [uploadimage,setUploadImage] = useState([]);
   const [scannerdata, setScannerData] = useState([]);
@@ -53,7 +54,7 @@ function ScanningBasicdetails() {
     const Assetid = scannertype_arr[0];
     const Assetname = scannertype_arr[1];
 
-    if (!Requestid || !scannertype || !Arriveddate || !ArrivedTime) {
+    if (!Requestid || !scannertype || !Arriveddate || !ArrivedTime || !StartReading) {
       if (!Requestid) {
         setMandatoryfield({ ...mandatoryfield, requestId: true })
       }
@@ -65,6 +66,9 @@ function ScanningBasicdetails() {
       }
       else if (!scannertype) {
         setMandatoryfield({ ...mandatoryfield, typeOfScanner: true })
+      }
+      else if (!StartReading) {
+        setMandatoryfield({ ...mandatoryfield, startReading: true })
       }
 
     }
@@ -114,7 +118,7 @@ function ScanningBasicdetails() {
               <select className="form-control" id="reqid" onChange={handleChangeRequest_id} style={{ height: "32px" }}>
                 <option value="" hidden> Please Select RequestId </option>
                 {requestid &&
-                  requestid.map((item,index) => (
+                  requestid.map((item, index) => (
                     <option key={index} value={item.Requestid}>{item.Requestid}</option>
                   ))}
               </select>
@@ -144,7 +148,7 @@ function ScanningBasicdetails() {
               <select className="form-control" id="scannertype" style={{ height: "32px" }} onChange={() => { handleHideErrorText('typeOfScanner') }}>
                 <option value="" hidden> Please Select RequestId </option>
                 {scannerdata &&
-                  scannerdata.map((ele,index) => (
+                  scannerdata.map((ele, index) => (
                     <option key={index} value={`${ele.Scnmodelno},${ele.Scannermodel}`} >{`${ele.Scannermodel},${ele.Scnmodelno}`}</option>
                   ))}
               </select>
@@ -153,8 +157,9 @@ function ScanningBasicdetails() {
 
             <div className="form-row">
               <div className="form-group col-md-6">
-                <label htmlFor="startreading"> Scanner start reading</label>
-                <input type="number" className="form-control" id="startreading" />
+                <label htmlFor="startreading"> Scanner start reading <span className="text-danger">*</span></label>
+                <input type="number" className="form-control" id="startreading" onChange={() => { handleHideErrorText('startReading') }} />
+                {mandatoryfield.startReading && <p className="text-danger">Enter StartReading</p>}
               </div>
               <div className="form-group col-md-6">
                 <label htmlFor="endreading">Scanner end reading</label>
@@ -174,8 +179,8 @@ function ScanningBasicdetails() {
 
 
             <div className="form-group">
-              <button type="submit" className="dark_btn btn float-right mb-4" onClick={handleClick} > Submit </button>
-              <button type="reset" className="maroon_btn btn mr-4 float-right mb-4" > Reset </button>
+              <button type="submit" className="maroon_btn btn float-right mb-4" onClick={handleClick}> Submit </button>
+              <button type="reset" className="dark_btn btn mr-4 float-right mb-4" > Reset </button>
             </div>
           </form>
         </div>
