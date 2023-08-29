@@ -19,6 +19,8 @@ const insertscannerportaldetails = async (req, res) => {
     const Assetid = req.body.Assetid;
     const Assetname = req.body.Assetname;
     const ActivityGLcode = req.body.ActivityGLcode;
+    const username = req.body.username;
+
 
     try {
         await sql.connect(sqlConfig)
@@ -30,8 +32,8 @@ const insertscannerportaldetails = async (req, res) => {
             and isnull(Totalpagesscan,'')='' and Requestid='${Requestid}'`)
 
             if (!check_blank.recordset.length) {
-                const result = await sql.query(`insert into NEWRMSDB.dbo.tbl_UserPortaldetails(Requestid,Requesttype,StartReading,Endreading,Arriveddate,ArrivedTime,Imagelink,Totalpagesscan,Remarks,EntryBy,Entrydate,Portalid,Noboxes,Nooffiles,Activity,Assetid,Assetname,ActivityGLcode,Updateddate) 
-                                                 values('${Requestid}','${Requesttype}','${StartReading}','${Endreading}','${Arriveddate}','${ArrivedTime}','${Imagelink}','${Totalpagesscan}','${Remarks}','${EntryBy}',getdate(),'${Portalid}','${Noboxes}','${Nooffiles}','${Activity}','${Assetid}','${Assetname}','${ActivityGLcode}',getdate())`)
+                const result = await sql.query(`insert into NEWRMSDB.dbo.tbl_UserPortaldetails(Requestid,Requesttype,StartReading,Endreading,Arriveddate,ArrivedTime,Imagelink,Totalpagesscan,Remarks,EntryBy,Entrydate,Portalid,Noboxes,Nooffiles,Activity,Assetid,Assetname,ActivityGLcode,Username) 
+                                                 values('${Requestid}','${Requesttype}','${StartReading}','${Endreading}','${Arriveddate}','${ArrivedTime}','${Imagelink}','${Totalpagesscan}','${Remarks}','${EntryBy}',getdate(),'${Portalid}','${Noboxes}','${Nooffiles}','${Activity}','${Assetid}','${Assetname}','${ActivityGLcode}','${username}')`)
 
                 res.status(200).send({ message: 'Added' })
             }

@@ -75,9 +75,9 @@ function ScanningBasicdetails() {
     else {
       const result = await insertscannerportaldetails(Requestid, "ScanningRequest", StartReading, Endreading, Arriveddate, ArrivedTime, "",
         Totalpagesscan, Remarks, EntryBy, "", "", "", Portalid, Assetid, Assetname, "", localStorage.getItem("User_Name"));
-
       if (result.message === 'Added') {
         alert("Added Successfully");
+        window.location.href = "/UserLogindetails";
       }
       else if (result.message === 'Already') {
         alert('This Request id is Already inserted in current Date')
@@ -85,8 +85,9 @@ function ScanningBasicdetails() {
       else if (result.message === 'Not Acceptable') {
         alert('Please Update the Previous Scanning Request of this request Id')
       }
-
-      window.location.href = "/UserLogindetails";
+      else{
+        alert('Somthing went wrong')
+      }
     }
   };
 
